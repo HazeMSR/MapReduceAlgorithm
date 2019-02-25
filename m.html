@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MapReduce</title>
+	<script src="MapReduce.js"></script>
+	<style>
+		table, th, td {
+  			border: 1px solid black;
+		}
+		#busqueda{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div align="center" id="container">
+		<p>
+			Hola, ingrese el archivo .txt y la forma en que desea ordenarlo.
+		</p>
+		<p>
+			Ignorar n&uacute;meros:
+			<select id="numeros">
+	  			<option value="2">S&iacute;</option>
+	  			<option value="1" selected>No</option>
+			</select>
+		</p>
+		<p>
+			Ignorar palabras.
+			<br>
+			Sep&aacute;relas con una pleca | y entre par&eacute;ntesis. 
+			<br>
+			Ejemplos: (palabra1|palabra2)
+			<br>
+			(palabra)
+			<br>
+			<textarea id="palabras" style="width:35em;height:6em;"></textarea> 
+		</p>
+		<p>
+			Ordenar por:
+			<select id="orden">
+	  			<option value="3">Menor a mayor</option>
+	  			<option value="2">Mayor a menor</option>
+	  			<option value="1" selected>Aparici&oacute;n</option>
+			</select>
+		</p>
+		    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+	   	<div id="busqueda">
+	   		<br>
+	    	Buscar palabra:
+	    	<input type="text" name="buscar" id="buscar">
+	    	<br>
+	    	# de veces:
+	    	<input type="text" name="veces" id="veces" disabled>
+	    	<br>
+	    	Frecuencia:
+	    	<input type="text" name="porcentaje" id="porcentaje" disabled>
+	    	<br>
+	    	<button onclick="buscar()">Buscar</button>
+		</div>
+	    <div id='output'>
+	    </div>
+	</div>
+
+</body>
+</html>
+<html>
