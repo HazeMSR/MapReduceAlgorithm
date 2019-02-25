@@ -216,7 +216,7 @@ var nW = 0;
         reader.readAsText(input.files[0]);
 
       };
-function buscar(){
+function search(){
 	var key = String(document.getElementById("buscar").value).toLowerCase();
 	var v = 0;
 	var por = 0.0;
